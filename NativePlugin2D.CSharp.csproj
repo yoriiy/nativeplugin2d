@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8F3E5D4C-EBF0-A5F8-EF1E-738C57D58360}</ProjectGuid>
+    <ProjectGuid>{70D4D6BF-3F19-A0D8-ADA0-8A82868CD97B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -94,12 +94,18 @@
     <Compile Include="Assets\ParamMeter.cs" />
     <Compile Include="Assets\SaveData.cs" />
     <Compile Include="Assets\SceneFadeManager.cs" />
+    <Compile Include="Assets\Scripts\AssetBundleLoadAsset.cs" />
+    <Compile Include="Assets\Scripts\AssetBundleLoadBase.cs" />
+    <Compile Include="Assets\Scripts\AssetBundleLoadManifest.cs" />
+    <Compile Include="Assets\Scripts\AssetLoaderBase.cs" />
+    <Compile Include="Assets\Scripts\AssetsBundleManager.cs" />
     <Compile Include="Assets\Scripts\BuildSet.cs" />
     <Compile Include="Assets\Scripts\CachingLoadExample.cs" />
     <Compile Include="Assets\Scripts\ExportAssetBundle.cs" />
     <Compile Include="Assets\Scripts\LoadAssetBundle.cs" />
     <Compile Include="Assets\Scripts\MyMove.cs" />
     <Compile Include="Assets\Scripts\ObjectManager.cs" />
+    <Compile Include="Assets\Scripts\SimpleCatAssetLoader.cs" />
     <Compile Include="Assets\SpriteBehaviour.cs" />
     <Compile Include="Assets\Texture_Blur.cs" />
     <Compile Include="Assets\UniMoveBehaviour.cs" />

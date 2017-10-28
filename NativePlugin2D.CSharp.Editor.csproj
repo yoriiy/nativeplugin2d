@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C9B116CA-013B-D1E0-4311-E62511EE245B}</ProjectGuid>
+    <ProjectGuid>{5E352C75-E8B2-E7B2-D80B-7C37BB44DECF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -128,9 +128,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="NativePlugin2D.CSharp.csproj">
-      <Project>{8F3E5D4C-EBF0-A5F8-EF1E-738C57D58360}</Project>
-      <Name>NativePlugin2D.CSharp</Name>
+    <ProjectReference Include="nativeplugin2D.CSharp.csproj">
+      <Project>{70D4D6BF-3F19-A0D8-ADA0-8A82868CD97B}</Project>
+      <Name>nativeplugin2D.CSharp</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
