@@ -27,7 +27,8 @@ public class AssetBundleUtility
     // ストリーミングアセットのパスを取得
     private static string GetRelativePath()
     {
-        return "file://" + Application.streamingAssetsPath;
+        return "http://github.com/yoriiy/nativeplugin2d/raw/master/Assets/StreamingAssets";
+        //return "file://" + Application.streamingAssetsPath;
     }
 
 #if UNITY_EDITOR
