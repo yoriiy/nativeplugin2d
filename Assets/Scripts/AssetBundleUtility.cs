@@ -1,10 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-#if UNITY_EDITOR
 using UnityEditor;
-#endif
 
 // AssetBundle ユーティリティクラス
 // パスの取得クラス
@@ -40,8 +37,8 @@ public class AssetBundleUtility
                 return "Android";
             case BuildTarget.iOS:
                 return "iOS";
-            case BuildTarget.WebPlayer:
-                return "WebPlayer";
+            //case BuildTarget.WebPlayer:
+            //    return "WebPlayer";
             default:
                 Debug.LogWarning("GetPlatformFolder " + target.ToString());
                 return null;
@@ -57,9 +54,9 @@ public class AssetBundleUtility
                 return "Android";
             case RuntimePlatform.IPhonePlayer:
                 return "iOS";
-            case RuntimePlatform.WindowsWebPlayer:
-            case RuntimePlatform.OSXWebPlayer:
-                return "WebPlayer";
+            //case RuntimePlatform.WindowsWebPlayer:
+            //case RuntimePlatform.OSXWebPlayer:
+            //    return "WebPlayer";
             default:
                 Debug.LogWarning("GetPlatformFolder " + platform.ToString());
                 return null;
