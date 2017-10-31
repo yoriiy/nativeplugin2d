@@ -1,57 +1,56 @@
-﻿#if UNITY_EDITOR 
-// エクスポータを設定するときはエディタを使わないので
-// ビルド時は通らないようにエクスポータ設定時は通るように
-// UNITY_EDITORでこのソースを囲む
+﻿#if UNITY_EDITOR
 using UnityEngine;
-using System.Collections;
 using UnityEditor;
+using System.Collections;
 using System.IO;
 
-
-public class CreateAssetBundles
+public class AssetBundleBuild
 {
-    [MenuItem("Assets/Build AssetBundles")] // UnityEditorのメニュータブに項目追加
-    static void BuildAllAssetBundles()// 項目をクリックした時に処理
+    [MenuItem("AssetBundles/Build for iOS")]
+    private static void BuildABiOS()
     {
-        // AssetBundleファイルを保存するフォルダ
-        string assetBundleDirectory = "Assets/AssetBundles";
-        // フォルダが存在するか確認
-        // Windows用
-        if (!Directory.Exists(assetBundleDirectory))
-        {
-            // フォルダが存在しない場合はフォルダ作成
-            Directory.CreateDirectory(assetBundleDirectory); 
-        }
-        // Android用
-        if (!Directory.Exists(assetBundleDirectory+"/Android"))
-        {
-            // フォルダが存在しない場合はフォルダ作成
-            Directory.CreateDirectory(assetBundleDirectory + "/Android");
-        }
-        // iOS用
-        if (!Directory.Exists(assetBundleDirectory+"/iOS"))
-        {
-            // フォルダが存在しない場合はフォルダ作成
-            Directory.CreateDirectory(assetBundleDirectory + "/iOS");
-        }
-        // AssetBundleファイルのビルドをしてファイルを作成しフォルダに保存
-        // Windows用
-        BuildPipeline.BuildAssetBundles(assetBundleDirectory, BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows);
-        // Android用
-        BuildPipeline.BuildAssetBundles(assetBundleDirectory + "/Android", BuildAssetBundleOptions.None, BuildTarget.Android);
-        // iOS用
-        BuildPipeline.BuildAssetBundles(assetBundleDirectory + "/iOS", BuildAssetBundleOptions.None, BuildTarget.iOS);
+        BuildAB(BuildTarget.iOS);
     }
 
-    // 複数アセットをAssetBundleにまとめる
-    [MenuItem ("Assets/Set AssetBundle Name")]
+    [MenuItem("AssetBundles/Build for Android")]
+    private static void BuildABAndroid()
+    {
+        BuildAB(BuildTarget.Android);
+    }
+
+    [MenuItem("AssetBundles/Build for iOS and Android")]
+    private static void BuildABiOSAndAndroid()
+    {
+        BuildTarget[] buildTargetList = new BuildTarget[] { BuildTarget.iOS, BuildTarget.Android };
+        foreach (var buildTarget in buildTargetList)
+        {
+            BuildAB(buildTarget);
+        }
+    }
+
+    private static void BuildAB(BuildTarget target)
+    {
+        // 出力ルートフォルダ + PlatForm名をそのまま最終出力フォルダとして使用する。
+        string resultOutPutPath = Application.streamingAssetsPath + "/" + target.ToString();
+
+        // 指定フォルダ存在チェック 無ければ作成
+        if (Directory.Exists(resultOutPutPath) == false)
+        {
+            Directory.CreateDirectory(resultOutPutPath);
+        }
+
+        // プラットフォーム名(Android・iOS)のマニフェストのアセットバンドルが作られる。
+        BuildPipeline.BuildAssetBundles(resultOutPutPath, BuildAssetBundleOptions.None, target);
+    }
+
+
+    [MenuItem("Assets/Set AssetBundle name")]
     private static void SelectedAsset()
     {
-        // 選択中のオブジェクトを取得
+        // アクティブな選択オブジェクトを取得する
         Object[] selection = Selection.GetFiltered(typeof(Object), SelectionMode.DeepAssets);
 
-        // 特定のアセットバンドルに追加していく
-        foreach(var obj in selection)
+        foreach (var obj in selection)
         {
             SetAssetBundleName(obj);
         }
@@ -59,10 +58,12 @@ public class CreateAssetBundles
 
     private static void SetAssetBundleName(Object obj)
     {
-        // アセットをAssetBundleにインポート
+        // AssetImporter
         AssetImporter importer = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(obj));
-        // インポート先の名前設定
         importer.assetBundleName = obj.name;
+
+        // バリアントは未使用
+        /*importer.assetBundleVariant = "";*/
     }
 }
 #endif
