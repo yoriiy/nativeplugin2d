@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AssetBundleManager : MonoBehaviour {
+public class AssetsBundleManager : MonoBehaviour {
 
     // AssetBundleのキャッシュ
     private AssetBundle assetBundleCache;

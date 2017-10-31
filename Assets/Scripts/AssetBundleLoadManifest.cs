@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class AssetBundleLoadManifest : AssetBundleLoadAsset {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	public AssetBundleLoadManifest (string bundleName, string assetName, System.Type type) : base (bundleName, assetName, type)
+    {
+
+    }
+
+    public override bool LoadRequest()
+    {
+        base.LoadRequest();
+
+        if(_request != null && _request.isDone)
+        {
+            AssetBundleManager.AssetBundleManifestObject = GetAsset<AssetBundleManifest>();
+            return false;
+        }else
+        {
+            return true;
+        }
+    }
 }

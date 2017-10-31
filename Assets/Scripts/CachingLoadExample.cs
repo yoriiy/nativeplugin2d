@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class CachingLoadExample : MonoBehaviour {
 
+#if UNITY_EDITOR
     // AssetBundleファイル格納先
     //string bundleURL = "http://localhost:8000/asset/StreamingAssets/sprites";
     string bundleURL = "https://github.com/yoriiy/nativeplugin2d/raw/master/Assets/StreamingAssets/sprites";
-
+    //string bundleURL = "file:///C:/Users/Yoriy/Desktop/nativeplugin2D/Assets/StreamingAssets/sprites";
+#elif UNITY_ANDROID
+    string bundleURL = "https://github.com/yoriiy/nativeplugin2d/raw/master/Assets/StreamingAssets/Android/sprites";
+#endif
     string assetName = "Cat";   // AssetBundle内のアセットファイル
     int version = 0;
 

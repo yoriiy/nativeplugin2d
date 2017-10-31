@@ -11,7 +11,7 @@ public class AutoBehaviour : MonoBehaviour {
     private TextAsset csvFile; 
     private List<string[]> csvDatas = new List<string[]>();
 
-    public AssetBundleManager assetBundleManager;
+    public AssetsBundleManager assetBundleManager;
     public Image image;
 
     [SerializeField]

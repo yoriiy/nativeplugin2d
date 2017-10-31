@@ -1,6 +1,6 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class AssetLoaderBase : MonoBehaviour {
 
@@ -18,16 +18,16 @@ public class AssetLoaderBase : MonoBehaviour {
     }
 
     // マニュフェストファイルのダウンロード
-    /*protected IEnumerator DownloadManifest()
+    protected IEnumerator DownloadManifest()
     {
         // ダウンロード開始
-        /*AssetBundleLoadBase request = AssetBundleManager.DownloadManifest();
+        AssetBundleLoadBase request = AssetBundleManager.DownloadManifest();
 
         if(request == null)
         {
             yield break;
         }
         // マニフェストファイルダウンロードの経過完了後コルーチン終了
-        yield return StartCorutine(this.CoroutineTimeOutCheck(request,5f));*/
-    //}
+        yield return StartCoroutine(this.CoroutineTimeOutCheck(request, 5f));
+    }
 }
