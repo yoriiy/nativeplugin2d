@@ -8,7 +8,8 @@ public class SimpleCatAssetLoader : AssetLoaderBase {
 
     private void Awake()
     {
-        downloadABList = new string[] { "sprites" };
+        // ソース上で呼び出しアセットを決める場合は設定する
+        //downloadABList = new string[] { "sprites", "sprites" };
     }
 	// Use this for initialization
 	IEnumerator Start () {

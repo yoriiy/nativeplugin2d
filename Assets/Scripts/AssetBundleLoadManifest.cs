@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// AssetBundleのマニフェストファイルを読み込んで
+/// 依存ファイルを取得するため
+/// </summary>
 public class AssetBundleLoadManifest : AssetBundleLoadAsset {
 
 	public AssetBundleLoadManifest (string bundleName, string assetName, System.Type type) : base (bundleName, assetName, type)

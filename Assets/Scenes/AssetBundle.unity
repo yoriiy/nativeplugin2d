@@ -137,7 +137,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   downloadABList:
   - sprites
+  - sprites
+  - sprites
   catPosList:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
 --- !u!4 &306452163
 Transform:
