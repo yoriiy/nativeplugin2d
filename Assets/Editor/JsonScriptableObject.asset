@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4aa372b8e7533a44b3ab7744ec0d5cb, type: 3}
+  m_Name: JsonScriptableObject
+  m_EditorClassIdentifier: 
+  m_jsonData:
+    ranking:
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 858208960
+    - name: "\u58EB\u90CE\u3055\u3093"
+      point: 649253696
+    - name: "\u6B21\u90CE\u3055\u3093"
+      point: 514925344
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 380596992
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 305970144
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 242537312
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 208955216
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 138059696
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 70895520
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 33582088
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 14925374
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 0
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 0
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 0
+    - name: "\u592A\u90CE\u3055\u3093"
+      point: 0
