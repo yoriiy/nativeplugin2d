@@ -11,7 +11,9 @@ public class RankingPoint : MonoBehaviour {
     // Use this for initialization
     void Start () {
         // ランキングファイル読み込み
-        string json = System.IO.File.ReadAllText(RANKING_PATH);
+        //string json = System.IO.File.ReadAllText(RANKING_PATH);
+        TextAsset json = Resources.Load("Json/ranking") as TextAsset;
+
         RankingData loadedJsonData = null;
 
         Transform childranking = this.transform;    // ランキングノードを取得
@@ -19,7 +21,7 @@ public class RankingPoint : MonoBehaviour {
         try
         {
             // ランキングjsonデータを配列データに変換
-            loadedJsonData = JsonUtility.FromJson<RankingData>(json);
+            loadedJsonData = JsonUtility.FromJson<RankingData>(json.ToString());
         }// データが正しくない場合はエラーを渡す
         catch (System.Exception i_exception)
         {
