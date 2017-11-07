@@ -34,10 +34,18 @@ public class ScreenShotUpLoad : MonoBehaviour {
 
         if (w.error != null)
         {
+            GameObject Text = GameObject.Find("Text2").gameObject;
+
+            Text.GetComponent<Text>().text = "SS Load Errror!";
+
             Debug.LogError(w.error);
         }
         else
         {
+            GameObject Text = GameObject.Find("Text2").gameObject;
+
+            Text.GetComponent<Text>().text = "SS Load Success!";
+
             Debug.Log("ScreenShotをアップロードしました。");
 
             Texture2D texture = Resources.Load("image/png/screenShot") as Texture2D;

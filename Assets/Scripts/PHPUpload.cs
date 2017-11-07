@@ -20,13 +20,17 @@ public class PHPUpload : MonoBehaviour {
 
         if (req.error != null)
         {
+            GameObject Text = GameObject.Find("Text").gameObject;
+
+            Text.GetComponent<Text>().text = "PHP Load Error!";
+
             Debug.LogError(req.error);
         }
         else
         {
             GameObject Text = GameObject.Find("Text").gameObject;
 
-            Text.GetComponent<Text>().text = "Load Success!";
+            Text.GetComponent<Text>().text = "PHP Load Success!";
             Debug.Log("PHPファイルを更新しました。");
         }
 
