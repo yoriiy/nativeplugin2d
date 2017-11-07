@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScreenShotUpLoad : MonoBehaviour {
 #if UNITY_EDITOR
@@ -38,6 +39,9 @@ public class ScreenShotUpLoad : MonoBehaviour {
         else
         {
             Debug.Log("ScreenShotをアップロードしました。");
+
+            Texture2D texture = Resources.Load("image/png/screenShot") as Texture2D;
+            this.GetComponent<Image>().sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
         }
 	}
 	

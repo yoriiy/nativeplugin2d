@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PHPUpload : MonoBehaviour {
 
@@ -23,6 +24,9 @@ public class PHPUpload : MonoBehaviour {
         }
         else
         {
+            GameObject Text = GameObject.Find("Text").gameObject;
+
+            Text.GetComponent<Text>().text = "Load Success!";
             Debug.Log("PHPファイルを更新しました。");
         }
 
