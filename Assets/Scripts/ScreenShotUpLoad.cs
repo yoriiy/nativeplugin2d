@@ -7,7 +7,7 @@ public class ScreenShotUpLoad : MonoBehaviour {
 #if UNITY_EDITOR
     private string ScreenShotURL = "file://C:/Users/Yoriy/Desktop/screenshot/screenShot.png";
 #else
-    private string ScreenShotURL = "http://github.com/yoriiy/nativeplugin2d/raw/master/Assets/image/png/screenShot.png";
+    private string ScreenShotURL = "http://github.com/yoriiy/nativeplugin2d/raw/master/Assets/Resources/image/png/screenShot.png";
 #endif
     // Use this for initialization
     IEnumerator Start () {
