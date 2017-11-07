@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class ScreenShotUpLoad : MonoBehaviour {
 
-	// Use this for initialization
+    private string ScreenShotURL = "file:///C:/Users/Yoriy/Desktop/screenshot/screenShot.png";
+	
+    // Use this for initialization
 	IEnumerator Start () {
         yield return new WaitForEndOfFrame();
 
@@ -22,9 +24,10 @@ public class ScreenShotUpLoad : MonoBehaviour {
         form.AddField("frameCount", Time.frameCount.ToString());
         form.AddBinaryData("fileUpload", bytes, "screenShot.png", "image/png");
 
-        var w = new WWW("http://raw.githubusercontent.com/yoriiy/nativeplugin2d/master/Assets/image/png/screenShot.png", form);
+        //var w = new WWW("file:///C:/Users/Yoriy/Desktop/nativeplugin2D/Assets/image/png/screenShot.png", form);
+        var w = new WWW(ScreenShotURL,form);
 
-        yield return w;
+         yield return w;
 
         if (w.error != null)
         {
