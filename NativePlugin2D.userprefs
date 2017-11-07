@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="nativeplugin2D.CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Editor\JsonData.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ScreenShotUpLoad.cs">
     <Files>
       <File FileName="Assets\SpriteBehaviour.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\AssetLoaderBase.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\AssetBundleLoadAsset.cs" Line="1" Column="1" />
       <File FileName="Assets\Editor\JsonData.cs" Line="8" Column="1" />
+      <File FileName="Assets\Scripts\ScreenShotUpLoad.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
