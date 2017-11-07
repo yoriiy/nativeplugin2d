@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ScreenShotUpLoad : MonoBehaviour {
-
-    private string ScreenShotURL = "file:///C:/Users/Yoriy/Desktop/screenshot/screenShot.png";
-	
+#if UNITY_EDITOR
+    private string ScreenShotURL = "file://C:/Users/Yoriy/Desktop/screenshot/screenShot.png";
+#else
+    private string ScreenShotURL = "http://github.com/yoriiy/nativeplugin2d/raw/master/Assets/image/png/screenShot.png";
+#endif
     // Use this for initialization
-	IEnumerator Start () {
+    IEnumerator Start () {
         yield return new WaitForEndOfFrame();
 
         var width = Screen.width;
