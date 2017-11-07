@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/RankingTest.unity
-    guid: 41a61f19cca33324aadc4eb2cac6d5e6
+    path: Assets/Scenes/webTest.unity
+    guid: 9d5ae64d19f2a404f8db89fb7fa0c058
