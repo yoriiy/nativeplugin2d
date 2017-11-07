@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class ScreenShotUpLoad : MonoBehaviour {
 
-    string ScreenShotURL = "http://github.com/yoriiy/nativeplugin2d/raw/master/Assets/Resources/image/png/screenShot.png";
+    //string ScreenShotURL = "http://github.com/yoriiy/nativeplugin2d/raw/master/Assets/Resources/image/png/screenShot.png";
+    string ScreenShotURL = "http://localhost:8000/image/png/screenShot.png";
     // Use this for initialization
     IEnumerator Start () {
         yield return new WaitForEndOfFrame();

@@ -8,13 +8,14 @@ public class PHPUpload : MonoBehaviour {
 	// Use this for initialization
 	IEnumerator Start () {
 
-        var url = "http://github.com/yoriiy/nativeplugin2d/raw/master/Assets/test.php";
+        //var url = "http://github.com/yoriiy/nativeplugin2d/raw/master/Assets/test.php";
+        var url = "http://localhost:8000/test.php";
 
         var wwwForm = new WWWForm();
 
         wwwForm.AddField("key1", "xxx");
 
-        var req = new WWW(url, wwwForm);
+        var req = new WWW(url);// wwwForm);
 
         yield return req;
 
