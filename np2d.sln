@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "np2d", "np2d.csproj", "{F66BC741-F552-648D-C299-5402252B58D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "np2d.Editor", "np2d.Editor.csproj", "{2D966A80-5457-B024-0A30-C62688614896}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F66BC741-F552-648D-C299-5402252B58D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F66BC741-F552-648D-C299-5402252B58D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F66BC741-F552-648D-C299-5402252B58D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F66BC741-F552-648D-C299-5402252B58D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D966A80-5457-B024-0A30-C62688614896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D966A80-5457-B024-0A30-C62688614896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D966A80-5457-B024-0A30-C62688614896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D966A80-5457-B024-0A30-C62688614896}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
